@@ -1,0 +1,28 @@
+{
+  "name": "discord-game-tic-tac-toe",
+  "version": "0.0.1",
+  "description": "Tic-tac-toe game for Discord",
+  "main": "src/app/app.ts",
+  "textGameEntryPoint": "app.js",
+  "maxPlayers" : 2,
+  "autoCreateUserChannels": false,
+  "languages": [
+    "en"
+  ],
+  "scripts": {
+    "clean": "rimraf build",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "zip": "npm-build-zip --source=./build/app "
+  },
+  "license": "MIT",
+  "dependencies": {
+    "discord-text-games-api": "0.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "18.0.5",
+    "npm-build-zip": "1.0.3",
+    "rimraf": "3.0.2",
+    "typescript": "4.7.4"
+  }
+}
